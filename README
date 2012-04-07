@@ -1,0 +1,15 @@
+FreeDimension
+集計プログラムの作成で、
+表計算ソフトのように合計の行や列を自動的に計算できるようにするクラス群
+
+ファイルについて
+clovrerose/freedimension 以下のIFreeDimension,IIncrementer,ISumuper,IDoubleSumuperをインターフェースとして使用。
+cloverrose/freedimension/imple 以下はインターフェースを実装したクラス。
+
+IFreeDimensionをnewするときは、表のサイズと初期値を与える。
+表のサイズは初期値から変更できない。
+インデックスが0の行と列が合計の行や列になる。
+
+集計でよくある再掲という、2重で計算する行や列にも対応できるように、
+incR,sumRというメソッド名の最後に"R"が付いているメソッドを使えば、
+合計に影響を与えたくない行や列を指定して集計ができる。影響を与えたくない場合はfalseを指定する。
